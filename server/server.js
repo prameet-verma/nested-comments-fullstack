@@ -23,7 +23,7 @@ app.addHook("onRequest", (req, res, done) => {
 });
 const prisma = new PrismaClient();
 const CURRENT_USER_ID = (
-  await prisma.user.findFirst({ where: { name: "Kyle" } })
+  await prisma.user.findFirst({ where: { name: "Prameet" } })
 ).id;
 const COMMENT_SELECT_FIELDS = {
   id: true,
