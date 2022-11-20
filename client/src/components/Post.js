@@ -1,10 +1,10 @@
 import { usePost } from "../context/PostContext";
 import { useAsyncFn } from "../hooks/useAsync";
 import { createComment } from "../services/comments";
-import CommentForm from "./CommentForm";
+import { CommentForm } from "./CommentForm";
 import CommentList from "./CommentList";
 
-function Post() {
+export default function Post() {
   const { post, rootComments, createLocalComment } = usePost();
   const {
     loading,
@@ -17,6 +17,7 @@ function Post() {
       createLocalComment
     );
   }
+
   return (
     <>
       <h1>{post.title}</h1>
@@ -37,5 +38,3 @@ function Post() {
     </>
   );
 }
-
-export default Post;
